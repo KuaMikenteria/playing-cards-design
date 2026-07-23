@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: lightgray;
+  margin: 20% auto;
+  padding: 10px;
+}
+#playing-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card {
+  width: 150px;
+  height: 200px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 20px 20px 0;
+  border-radius: 10px;
+  padding: 5px;
+}
+.card:hover {
+  transform: scale(1.5);
+  transition: 0.5s;
+  overflow: hidden;
+  z-index: 1;
+}
+.left {
+  align-self: flex-start;
+}
+.middle {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 50px;
+}
+.right {
+  align-self: flex-end;
+  transform: scaleY(-1);
+}
+.left,
+.right {
+  font-size: 20px;
+}
+
+.club > div {
+  color: green;
+}
+.heart > div {
+  color: red;
+}
+.diamond > div {
+  color: blue;
+}
+
+.group1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.group1 > div:nth-child(3) {
+  transform: scaleY(-1);
+}
+
+.group2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 36px;
+}
+.group2 > div:nth-child(4),
+div:nth-child(5) {
+  transform: scaleY(-1);
+}
+
+.group3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 40px;
+  margin-left: 5px;
+}
+.group3 > div:last-child {
+  margin-left: 15px;
+}
