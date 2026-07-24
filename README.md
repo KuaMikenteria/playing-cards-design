@@ -16,7 +16,7 @@ You can tweak the following CSS variables directly in `styles.css`:
 
 ## 📸 Screenshots
 
-| Original (single‑file) | Updated (separated) | Hover interaction |
+| Original Content | Updated Content | Hover Interaction |
 |------------------------|---------------------|-------------------|
 | ![Original](img/sample1.png) | ![Separated](img/sample2.png) | ![Hover](img/hover.png) |
 
