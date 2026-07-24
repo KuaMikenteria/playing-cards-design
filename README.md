@@ -18,7 +18,7 @@ You can tweak the following CSS variables directly in `styles.css`:
 
 | Original (single‑file) | Updated (separated) | Hover interaction |
 |------------------------|---------------------|-------------------|
-| ![Original](sample1.png) | ![Separated](sample2.png) | ![Hover](hover.png) |
+| ![Original](../sample1.png) | ![Separated](../sample2.png) | ![Hover](../hover.png) |
 
 ---
 
