@@ -9,7 +9,6 @@ body {
   padding: 80px 10px 70px;
 }
 
-/* Fixed Header */
 .site-header {
   position: fixed;
   top: 0;
@@ -33,7 +32,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Fixed Footer */
 .site-footer {
   position: fixed;
   bottom: 0;
@@ -124,6 +122,7 @@ body {
   align-items: center;
 }
 
+.group1 > div:nth-child(2),
 .group1 > div:nth-child(3) {
   transform: scaleY(-1);
 }
@@ -136,6 +135,7 @@ body {
   font-size: 36px;
 }
 
+.group2 > div:nth-child(3),
 .group2 > div:nth-child(4),
 .group2 > div:nth-child(5) {
   transform: scaleY(-1);
@@ -151,5 +151,18 @@ body {
 }
 
 .group3 > div:last-child {
+  margin-left: 15px;
+}
+
+.group4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+  font-size: 40px;
+  margin-left: 5px;
+}
+
+.group4 > div:last-child {
   margin-left: 15px;
 }
