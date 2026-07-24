@@ -1,190 +1,128 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>Playing Cards</title>
-  </head>
+</head>
 
-  <body>
+<body>
+
     <header class="site-header">
-      <h1>Playing Cards</h1>
+        <h1>♠ Playing Cards ♥</h1>
     </header>
 
     <main id="playing-cards">
-      <div class="card spade">
-        <div class="left">
-          <div>A</div>
-          <div>♠</div>
-        </div>
-        <div class="middle">
-          <div>♠</div>
-        </div>
-        <div class="right">
-          <div>A</div>
-          <div>♠</div>
-        </div>
-      </div>
 
-      <div class="card club">
-        <div class="left">
-          <div>2</div>
-          <div>♣</div>
+        <!-- Ace of Spades -->
+        <div class="card card-ace spade">
+            <div class="left"><span>A</span><span>♠</span></div>
+            <div class="middle">♠</div>
+            <div class="right"><span>A</span><span>♠</span></div>
         </div>
-        <div class="middle">
-          <div class="group1">
-            <div>♣</div>
-            <div>♣</div>
-          </div>
-        </div>
-        <div class="right">
-          <div>2</div>
-          <div>♣</div>
-        </div>
-      </div>
 
-      <div class="card heart">
-        <div class="left">
-          <div>3</div>
-          <div>♥</div>
+        <!-- 2 of Clubs -->
+        <div class="card card-2 club">
+            <div class="left"><span>2</span><span>♣</span></div>
+            <div class="middle">
+                <div class="row"><span class="pip">♣</span></div>
+                <div class="row"><span class="pip">♣</span></div>
+            </div>
+            <div class="right"><span>2</span><span>♣</span></div>
         </div>
-        <div class="middle">
-          <div class="group2">
-            <div>♥</div>
-            <div>♥</div>
-            <div>♥</div>
-          </div>
-        </div>
-        <div class="right">
-          <div>3</div>
-          <div>♥</div>
-        </div>
-      </div>
 
-      <div class="card diamond">
-        <div class="left">
-          <div>4</div>
-          <div>♦</div>
+        <!-- 3 of Hearts -->
+        <div class="card card-3 heart">
+            <div class="left"><span>3</span><span>♥</span></div>
+            <div class="middle">
+                <div class="row"><span class="pip">♥</span></div>
+                <div class="row"><span class="pip">♥</span></div>
+                <div class="row"><span class="pip">♥</span></div>
+            </div>
+            <div class="right"><span>3</span><span>♥</span></div>
         </div>
-        <div class="middle group4">
-          <div>♦ ♦</div>
-          <div>♦ ♦</div>
-        </div>
-        <div class="right">
-          <div>4</div>
-          <div>♦</div>
-        </div>
-      </div>
 
-      <div class="card spade">
-        <div class="left">
-          <div>5</div>
-          <div>♠</div>
+        <!-- 4 of Diamonds -->
+        <div class="card card-4 diamond">
+            <div class="left"><span>4</span><span>♦</span></div>
+            <div class="middle">
+                <div class="row"><span class="pip">♦</span><span class="pip">♦</span></div>
+                <div class="row"><span class="pip">♦</span><span class="pip">♦</span></div>
+            </div>
+            <div class="right"><span>4</span><span>♦</span></div>
         </div>
-        <div class="middle">
-          <div>♣ ♣</div>
-          <div>♣</div>
-          <div>♣ ♣</div>
-        </div>
-        <div class="right">
-          <div>5</div>
-          <div>♠</div>
-        </div>
-      </div>
 
-      <div class="card club">
-        <div class="left">
-          <div>6</div>
-          <div>♣</div>
+        <!-- 5 of Spades -->
+        <div class="card card-5 spade">
+            <div class="left"><span>5</span><span>♠</span></div>
+            <div class="middle">
+                <div class="row"><span class="pip">♠</span><span class="pip">♠</span></div>
+                <div class="row-center"><span class="pip">♠</span></div>
+                <div class="row"><span class="pip">♠</span><span class="pip">♠</span></div>
+            </div>
+            <div class="right"><span>5</span><span>♠</span></div>
         </div>
-        <div class="middle">
-          <div class="group1">
-            <div>♣ ♣</div>
-            <div>♣ ♣</div>
-            <div>♣ ♣</div>
-          </div>
-        </div>
-        <div class="right">
-          <div>6</div>
-          <div>♣</div>
-        </div>
-      </div>
 
-      <div class="card heart">
-        <div class="left">
-          <div>7</div>
-          <div>♥</div>
+        <!-- 6 of Clubs -->
+        <div class="card card-6 club">
+            <div class="left"><span>6</span><span>♣</span></div>
+            <div class="middle">
+                <div class="row"><span class="pip">♣</span><span class="pip">♣</span><span class="pip">♣</span></div>
+                <div class="row"><span class="pip">♣</span><span class="pip">♣</span><span class="pip">♣</span></div>
+            </div>
+            <div class="right"><span>6</span><span>♣</span></div>
         </div>
-        <div class="middle">
-          <div class="group2">
-            <div>♥ ♥</div>
-            <div>♥ ♥</div>
-            <div>♥</div>
-            <div>♥ ♥</div>
-          </div>
-        </div>
-        <div class="right">
-          <div>7</div>
-          <div>♥</div>
-        </div>
-      </div>
 
-      <div class="card heart">
-        <div class="left">
-          <div>8</div>
-          <div>♥</div>
+        <!-- 7 of Hearts -->
+        <div class="card card-7 heart">
+            <div class="left"><span>7</span><span>♥</span></div>
+            <div class="middle">
+                <div class="row-spread"><span class="pip">♥</span><span class="pip">♥</span></div>
+                <div class="row-center"><span class="pip">♥</span><span class="pip">♥</span><span class="pip">♥</span></div>
+                <div class="row-spread"><span class="pip">♥</span><span class="pip">♥</span></div>
+            </div>
+            <div class="right"><span>7</span><span>♥</span></div>
         </div>
-        <div class="middle">
-          <div class="group2">
-            <div>♥ ♥</div>
-            <div>♥</div>
-            <div>♥ ♥</div>
-            <div>♥</div>
-            <div>♥ ♥</div>
-          </div>
-        </div>
-        <div class="right">
-          <div>8</div>
-          <div>♥</div>
-        </div>
-      </div>
 
-      <div class="card diamond">
-        <div class="left">
-          <div>9</div>
-          <div>♦</div>
+        <!-- 8 of Hearts -->
+        <div class="card card-8 heart">
+            <div class="left"><span>8</span><span>♥</span></div>
+            <div class="middle">
+                <div class="row"><span class="pip">♥</span><span class="pip">♥</span><span class="pip">♥</span></div>
+                <div class="row-center"><span class="pip">♥</span><span class="pip">♥</span></div>
+                <div class="row"><span class="pip">♥</span><span class="pip">♥</span><span class="pip">♥</span></div>
+            </div>
+            <div class="right"><span>8</span><span>♥</span></div>
         </div>
-        <div class="middle group3">
-          <div>♦ ♦ ♦</div>
-          <div>♦ ♦ ♦</div>
-          <div>♦ ♦ ♦</div>
-        </div>
-        <div class="right">
-          <div>9</div>
-          <div>♦</div>
-        </div>
-      </div>
 
-      <div class="card diamond">
-        <div class="left">
-          <div>10</div>
-          <div>♦</div>
+        <!-- 9 of Diamonds -->
+        <div class="card card-9 diamond">
+            <div class="left"><span>9</span><span>♦</span></div>
+            <div class="middle">
+                <div class="row"><span class="pip">♦</span><span class="pip">♦</span><span class="pip">♦</span></div>
+                <div class="row"><span class="pip">♦</span><span class="pip">♦</span><span class="pip">♦</span></div>
+                <div class="row"><span class="pip">♦</span><span class="pip">♦</span><span class="pip">♦</span></div>
+            </div>
+            <div class="right"><span>9</span><span>♦</span></div>
         </div>
-        <div class="middle group3">
-          <div>♦ ♦ ♦ ♦</div>
-          <div>♦ ♦</div>
-          <div>♦ ♦ ♦ ♦</div>
+
+        <!-- 10 of Diamonds -->
+        <div class="card card-10 diamond">
+            <div class="left"><span>10</span><span>♦</span></div>
+            <div class="middle">
+                <div class="row-spread"><span class="pip">♦</span><span class="pip">♦</span><span class="pip">♦</span><span class="pip">♦</span></div>
+                <div class="row-center"><span class="pip">♦</span><span class="pip">♦</span></div>
+                <div class="row-spread"><span class="pip">♦</span><span class="pip">♦</span><span class="pip">♦</span><span class="pip">♦</span></div>
+            </div>
+            <div class="right"><span>10</span><span>♦</span></div>
         </div>
-        <div class="right">
-          <div>10</div>
-          <div>♦</div>
-        </div>
-      </div>
+
     </main>
 
     <footer class="site-footer">
-      <p>&copy; 2026 Playing Cards. All Rights Reserved.</p>
+        <p>&copy; 2026 Playing Cards. All Rights Reserved.</p>
     </footer>
-  </body>
+
+</body>
 </html>
