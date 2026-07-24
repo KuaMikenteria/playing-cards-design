@@ -1,168 +1,298 @@
+/* ── Reset ── */
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background: lightgray;
-  padding: 80px 10px 70px;
+    background: #e8e8e8;
+    padding: 80px 10px 70px;
+    font-family: Arial, sans-serif;
 }
 
+/* ── Header / Footer ── */
 .site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-
-  background: #222;
-  color: white;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #1e1e2f;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+    z-index: 1000;
 }
-
 .site-header h1 {
-  font-size: 1.8rem;
-  font-family: Arial, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .site-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50px;
-
-  background: #222;
-  color: white;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-size: 0.9rem;
-  font-family: Arial, sans-serif;
-
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #1e1e2f;
+    color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.35);
+    z-index: 1000;
 }
 
-/* Cards */
+/* ── Card Grid ── */
 #playing-cards {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-
-  min-height: calc(100vh - 130px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    min-height: calc(100vh - 130px);
+    padding: 10px 0;
 }
 
+/* ── Individual Card ── */
 .card {
-  width: 150px;
-  height: 200px;
-  background: white;
-  display: flex;
-  justify-content: space-between;
-  box-shadow: 0 20px 20px 0;
-  border-radius: 10px;
-  padding: 5px;
+    width: 150px;
+    height: 200px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 8px 10px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    flex-shrink: 0;
 }
 
 .card:hover {
-  transform: scale(1.5);
-  transition: 0.5s;
-  overflow: hidden;
-  z-index: 1;
+    transform: scale(1.45) translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.30);
+    z-index: 10;
+}
+
+/* ── Left / Right (rank + suit) ── */
+.left,
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    user-select: none;
 }
 
 .left {
-  align-self: flex-start;
+    align-self: flex-start;
+}
+.right {
+    align-self: flex-end;
+    transform: scaleY(-1);
 }
 
+/* ── Middle (pips) ── */
 .middle {
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    font-size: 34px;
+    line-height: 1.2;
+    text-align: center;
+    user-select: none;
 }
 
-.right {
-  align-self: flex-end;
-  transform: scaleY(-1);
+/* ── Suit colours ── */
+.spade .left,
+.spade .right,
+.spade .middle {
+    color: #1a1a1a;
 }
 
-.left,
-.right {
-  font-size: 20px;
+.club .left,
+.club .right,
+.club .middle {
+    color: #1a7a3a;
 }
 
-.club > div {
-  color: green;
+.heart .left,
+.heart .right,
+.heart .middle {
+    color: #c0392b;
 }
 
-.heart > div {
-  color: red;
+.diamond .left,
+.diamond .right,
+.diamond .middle {
+    color: #1a6bb0;
 }
 
-.diamond > div {
-  color: blue;
+/* ── Pip-row helpers ── */
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
 }
 
-.group1 {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+.row-single {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
-.group1 > div:nth-child(2),
-.group1 > div:nth-child(3) {
-  transform: scaleY(-1);
+.row-spread {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 4px;
 }
 
-.group2 {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  font-size: 36px;
+.row-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
 }
 
-.group2 > div:nth-child(3),
-.group2 > div:nth-child(4),
-.group2 > div:nth-child(5) {
-  transform: scaleY(-1);
+.pip {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
 }
 
-.group3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  font-size: 40px;
-  margin-left: 5px;
+/* ── Specific card overrides ── */
+
+/* Ace: single pip in centre */
+.card-ace .middle {
+    font-size: 58px;
 }
 
-.group3 > div:last-child {
-  margin-left: 15px;
+/* 2: two pips diagonal */
+.card-2 .middle {
+    justify-content: space-between;
+    padding: 6px 0;
+}
+.card-2 .middle .row:first-child {
+    justify-content: flex-start;
+}
+.card-2 .middle .row:last-child {
+    justify-content: flex-end;
 }
 
-.group4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction:column;
-  font-size: 40px;
-  margin-left: 5px;
+/* 3: three pips diagonal */
+.card-3 .middle {
+    justify-content: space-between;
+    padding: 6px 0;
+}
+.card-3 .middle .row:first-child {
+    justify-content: flex-start;
+}
+.card-3 .middle .row:nth-child(2) {
+    justify-content: center;
+}
+.card-3 .middle .row:last-child {
+    justify-content: flex-end;
 }
 
-.group4 > div:last-child {
-  margin-left: 15px;
+/* 4: 2×2 grid */
+.card-4 .middle .row {
+    justify-content: space-between;
+    padding: 0 4px;
+}
+
+/* 5: 2×2 + centre */
+.card-5 .middle .row {
+    justify-content: space-between;
+    padding: 0 4px;
+}
+.card-5 .middle .row-center {
+    justify-content: center;
+    padding: 2px 0;
+}
+
+/* 6: 2 rows of 3 */
+.card-6 .middle .row {
+    justify-content: space-between;
+    padding: 0 6px;
+}
+
+/* 7: 2-3-2 */
+.card-7 .middle .row-spread {
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.card-7 .middle .row-center {
+    justify-content: center;
+    gap: 6px;
+}
+
+/* 8: 3-2-3 */
+.card-8 .middle .row {
+    justify-content: center;
+    gap: 6px;
+}
+.card-8 .middle .row-spread {
+    justify-content: space-between;
+    padding: 0 8px;
+}
+.card-8 .middle .row-center {
+    justify-content: center;
+    gap: 6px;
+}
+
+/* 9: 3×3 grid */
+.card-9 .middle .row {
+    justify-content: space-between;
+    padding: 0 6px;
+}
+
+/* 10: 4-2-4 */
+.card-10 .middle .row-spread {
+    justify-content: space-between;
+    padding: 0 4px;
+}
+.card-10 .middle .row-center {
+    justify-content: center;
+    gap: 4px;
+}
+
+/* ── Responsive tweaks ── */
+@media (max-width: 480px) {
+    .card {
+        width: 120px;
+        height: 168px;
+        padding: 6px 8px;
+    }
+    .left,
+    .right {
+        font-size: 14px;
+    }
+    .middle {
+        font-size: 26px;
+    }
+    .card-ace .middle {
+        font-size: 44px;
+    }
+    .pip {
+        width: 16px;
+    }
+    .site-header h1 {
+        font-size: 1.4rem;
+    }
 }
