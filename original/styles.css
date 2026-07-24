@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: lightgray;
+  padding: 80px 10px 70px;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+
+  background: #222;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.site-header h1 {
+  font-size: 1.8rem;
+  font-family: Arial, sans-serif;
+}
+
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+
+  background: #222;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 0.9rem;
+  font-family: Arial, sans-serif;
+
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+/* Cards */
+#playing-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  min-height: calc(100vh - 130px);
+}
+
+.card {
+  width: 150px;
+  height: 200px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 20px 20px 0;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.card:hover {
+  transform: scale(1.5);
+  transition: 0.5s;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.left {
+  align-self: flex-start;
+}
+
+.middle {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 50px;
+}
+
+.right {
+  align-self: flex-end;
+  transform: scaleY(-1);
+}
+
+.left,
+.right {
+  font-size: 20px;
+}
+
+.club > div {
+  color: green;
+}
+
+.heart > div {
+  color: red;
+}
+
+.diamond > div {
+  color: blue;
+}
+
+.group1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.group1 > div:nth-child(2),
+.group1 > div:nth-child(3) {
+  transform: scaleY(-1);
+}
+
+.group2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 36px;
+}
+
+.group2 > div:nth-child(3),
+.group2 > div:nth-child(4),
+.group2 > div:nth-child(5) {
+  transform: scaleY(-1);
+}
+
+.group3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 40px;
+  margin-left: 5px;
+}
+
+.group3 > div:last-child {
+  margin-left: 15px;
+}
+
+.group4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+  font-size: 40px;
+  margin-left: 5px;
+}
+
+.group4 > div:last-child {
+  margin-left: 15px;
+}
